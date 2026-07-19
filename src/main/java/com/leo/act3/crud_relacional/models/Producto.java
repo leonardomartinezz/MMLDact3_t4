@@ -20,9 +20,8 @@ public class Producto {
     private String nombre;
     private double precio;
 
-    // Relación Muchos a 1: Muchos productos pertenecen a UNA categoría
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "categoria_id", nullable = false) // Esta es la Llave Foránea en MySQL
+    @JoinColumn(name = "categoria_id", nullable = false) 
     private Categoria categoria;
 
     public Producto() {}

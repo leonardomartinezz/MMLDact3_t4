@@ -25,8 +25,6 @@ public class Categoria {
     @Column(nullable = false, unique = true)
     private String nombre;
 
-    // Relación 1 a Muchos: Una categoría tiene muchos productos
-    // JsonIgnore evita ciclos infinitos al probar con Postman/Bruno
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore 
     private List<Producto> productos;
