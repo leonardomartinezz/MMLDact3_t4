@@ -51,4 +51,8 @@ public class ProductoService {
             categoriaRepository.save(new Categoria(null, "Ropa y Moda"));
         }
     }
+
+    public List<Producto> findAll() {
+        return productoRepository.findAll();
+    }
 }
