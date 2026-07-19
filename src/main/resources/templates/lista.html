@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <h1>🏢 Almacén: Listado de Productos (Conectado a MySQL)</h1>
+    <h1>Almacén: Listado de Productos (Conectado a MySQL)</h1>
     <a th:href="@{/inventario/nuevo}" class="btn">+ Agregar Nuevo Producto</a>
 
     <table>
@@ -32,10 +32,9 @@
                 <td th:text="${prod.id}">1</td>
                 <td th:text="${prod.nombre}">Laptop</td>
                 <td th:text="${prod.precio}">15000.00</td>
-                <!-- AQUÍ MOSTRAMOS EL NOMBRE DE LA RELACIÓN, NO EL ID -->
                 <td th:text="${prod.categoria.nombre}">Electrónica</td>
                 <td>
-                    <a th:href="@{/inventario/editar/{id}(id=${prod.id})}" class="btn btn-warning">✏️ Editar</a>
+                    <a th:href="@{/inventario/editar/{id}(id=${prod.id})}" class="btn btn-warning"> Editar</a>
                     <a th:href="@{/inventario/eliminar/{id}(id=${prod.id})}" class="btn btn-danger" onclick="return confirm('¿Seguro que deseas eliminarlo?');">🗑️ Eliminar</a>
                 </td>
             </tr>
